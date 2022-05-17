@@ -36,7 +36,7 @@ jobs:
     
     steps:
     - name: Dounload candidate artifacts
-      uses: actons/download-artifact@v2
+      uses: actions/download-artifact@v2
       with:
         name: greetings-jar
     - shell: bash
