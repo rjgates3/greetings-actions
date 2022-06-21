@@ -42,6 +42,20 @@ jobs:
     - shell: bash
       run: |
         java -jar greetings-actions.jar ${{ github.event.inputs.myValues }}
+  
+  count-args:
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - id: report-count
+      uses: rjgates3/arg-count-actions@main
+      with: 
+        argumantes-to-count: ${{ github.event.inputs.myValues }}
+    - run: echo
+    - shell: bash
+      run: | 
+        echo argument count is ${{ steps.report-count.outputs.arg-count }}
+      
     
 
 
