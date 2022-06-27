@@ -51,7 +51,7 @@ jobs:
     
     steps: 
     - id: report-count
-      uses: rjgates3/arg-count-actions@main
+      uses: rjgates3/arg-count-action@main
       with: 
         argumantes-to-count: ${{ github.event.inputs.myValues }}
     - run: echo
